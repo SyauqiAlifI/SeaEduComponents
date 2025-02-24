@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  min-height: 100vh;
+  position: relative;
+  font-family: "Poppins";
+  color: #0a0723;
+  background: #f8faf9;
+  display: flex;
+  flex-direction: column;
+}
+
+.validation-message {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+
+.validation-message.success {
+  color: #27ae60;
+}
+
+.validation-message.error {
+  color: #e74c3c;
+}
+
+.bg-custom-gradient {
+  background: linear-gradient(90deg, #a531ff 0%, #ff1fa5 100%);
+}
+
+.toggle-password {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  padding-left: 5px;
+  background-image: linear-gradient(90deg, white, transparent);
+  transform: translateY(-50%) translateX(-20px);
+}
+
+.requirement {
+  margin: 0.25rem 0;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.requirement::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1rem;
+  background-image: url('./assets/circle-xmark-solid.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center
+}
+
+.requirement.valid::before {
+  /* content: "✓";
+    color: #27ae60; */
+  background-image: url('./assets/circle-check-solid.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.hideAside {}
+
+article img {
+  max-width: 720px;
+  height: auto;
+}
+
+/* article {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    line-height: 28px;
+    gap: 20px;
+    width: 750px;
+}
+
+article h1, article h2 {
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 42px;
+    width: 530px;
+}
+
+article h3, article h4 {
+    font-weight: 600;
+    font-size: 18px;
+    width: 530px;
+}
+
+article p {
+    line-height: 28px;
+}
+
+article img {
+    border-radius: 14px;
+    width: 580px;
+}
+
+article ul {
+    margin-left: 2rem;
+    list-style-type: disc;
+    color: #0A0723;
+    background: #F8FAF9;
+    display: flex;
+    flex-direction: column;
+}
+
+article p + ul {
+   margin-top: -20px;
+}
+
+article p + ol {
+   margin-top: -20px;
+}
+
+article ol {
+    margin-left: 2rem;
+    list-style-type: decimal;
+    color: #0A0723;
+    background: #F8FAF9;
+    display: flex;
+    flex-direction: column;
+} */
+
+.roadmap-card {
+  overflow: hidden;
+}
+
+@layer utilities {
+  .drop-shadow-effect {
+    box-shadow: 0px 12px 30px 0px #2F6A6280;
+  }
+}
+
+.bg-custom-gradient {
+  background: linear-gradient(90deg, #A531FF 0%, #FF1FA5 100%);
+}
+
+.uscontainer {
+  @apply px-8 m-0 w-full md:max-w-[95%] md:mx-auto xl:max-w-[90%]
+}
+
+.landcontain {
+  @apply flex flex-col justify-normal items-start text-start
+}
